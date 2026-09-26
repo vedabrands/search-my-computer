@@ -29,12 +29,12 @@ jobs:
       - name: Rust Cache
         uses: Swatinem/rust-cache@v2
         with:
-          workspaces: './src-tauri -> target'
+          workspaces: '. -> target'
 
       - name: Fetch Bundled ONNX Models
         shell: pwsh
         run: |
-          powershell -ExecutionPolicy Bypass -File scripts/fetch_models.ps1
+          pwsh -File scripts/fetch_models.ps1
 
       - name: Install npm dependencies
         run: npm install

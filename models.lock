@@ -46,9 +46,9 @@
       "license": "Apache-2.0",
       "files": {
         "embedding_model.onnx": {
-          "url": "https://huggingface.co/dscripka/openWakeWord/resolve/main/embedding_model.onnx",
-          "sha256": "4b68ff0f81d113ad5295c55be0cbe43ba0901e1dfa83fc33348ca592f6b8a245",
-          "size": 1827402
+          "url": "https://github.com/dscripka/openWakeWord/releases/download/v0.5.1/embedding_model.onnx",
+          "sha256": "70d164290c1d095d1d4ee149bc5e00543250a7316b59f31d056cff7bd3075c1f",
+          "size": 1326578
         }
       }
     },
@@ -57,9 +57,9 @@
       "license": "Apache-2.0",
       "files": {
         "model.onnx": {
-          "url": "https://huggingface.co/dscripka/openWakeWord/resolve/main/hey_jarvis_v0.1.onnx",
-          "sha256": "3cfb7516d25f7704cfbc17c18252a1ba08dae76191b706c646b9ec59bcf6ba76",
-          "size": 147514
+          "url": "https://github.com/dscripka/openWakeWord/releases/download/v0.5.1/hey_jarvis_v0.1.onnx",
+          "sha256": "94a13cfe60075b132f6a472e7e462e8123ee70861bc3fb58434a73712ee0d2cb",
+          "size": 1271370
         }
       }
     },
@@ -68,9 +68,9 @@
       "license": "Apache-2.0",
       "files": {
         "model.onnx": {
-          "url": "https://huggingface.co/dscripka/openWakeWord/resolve/main/alexa_v0.1.onnx",
-          "sha256": "7a30456fb41e40ebfc51480f2884a44ba25da6c1e5a593309a8eb71fe1efd630",
-          "size": 147514
+          "url": "https://github.com/dscripka/openWakeWord/releases/download/v0.5.1/alexa_v0.1.onnx",
+          "sha256": "6ff566a01d12670e8d9e3c59da32651db1575d17272a601b7f8a39283dfbae3e",
+          "size": 854246
         }
       }
     },
@@ -80,23 +80,23 @@
       "files": {
         "encoder_model_quantized.onnx": {
           "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/main/onnx/encoder_model_quantized.onnx",
-          "sha256": "63f739097d7eeff5be3d00735b54a201c2ba244199c1e75db2eb85bb98305888",
-          "size": 16421458
+          "sha256": "8cc3c6f8563d1b3fbd2c5af9f64c2bed8b020bc593c402d1ef53b9f08fbf1b90",
+          "size": 10124913
         },
         "decoder_model_merged_quantized.onnx": {
           "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/main/onnx/decoder_model_merged_quantized.onnx",
-          "sha256": "9b646c26bcfefd6e076610fb8cf2262d47cb4e815e985854619ee370db04b90d",
-          "size": 23412586
+          "sha256": "dbb2e063b7fbc41d9803b9698f93ecb035c50cbb3fb87b56cb131e4a5eb99059",
+          "size": 30727382
         },
         "tokenizer.json": {
           "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/main/tokenizer.json",
-          "sha256": "74f5d60db2d371ee91a27e69f8ae54ad5ebef6195c6a1e8a4d46cbf93246eb3f",
-          "size": 834571
+          "sha256": "c6ee8f089220a5b1188f6426456772572671c6141ae007eecb83c6a8349f5deb",
+          "size": 2128494
         },
         "vocab.json": {
           "url": "https://huggingface.co/Xenova/whisper-tiny.en/resolve/main/vocab.json",
-          "sha256": "b0682245b7fb5625bf94e33919e13a409f4534efd0c72c1c1f55f24254b73259",
-          "size": 836173
+          "sha256": "f6bd25a65e4e63ca31360e9fb11c7e4f9a391a78385d640acd814092dd6eee4f",
+          "size": 999186
         }
       }
     }

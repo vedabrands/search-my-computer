@@ -5,6 +5,13 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
+$ProgressPreference = "SilentlyContinue"
+
+try {
+    [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.SecurityProtocolType]::Tls12
+} catch {
+    # Ignore if not supported in environment
+}
 
 if (-not (Test-Path $ModelsLockPath)) {
     Write-Error "models.lock not found at $ModelsLockPath"
@@ -58,7 +65,22 @@ foreach ($modelKey in $targetKeys) {
         if ($downloadNeeded) {
             Write-Host "  [DOWNLOADING] $fileName from $url ..."
             $tempPath = "$destPath.tmp"
-            Invoke-WebRequest -Uri $url -OutFile $tempPath -UseBasicParsing
+            if (Test-Path $tempPath) {
+                Remove-Item -Path $tempPath -Force
+            }
+
+            $userAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36"
+            $wc = New-Object System.Net.WebClient
+            $wc.Headers.Add("User-Agent", $userAgent)
+            try {
+                $wc.DownloadFile($url, $tempPath)
+            } catch {
+                # Fallback to Invoke-WebRequest
+                Invoke-WebRequest -Uri $url -OutFile $tempPath -UserAgent $userAgent -MaximumRedirection 10 -UseBasicParsing
+            } finally {
+                $wc.Dispose()
+            }
+
             $downloadedHash = (Get-FileHash -Path $tempPath -Algorithm SHA256).Hash.ToLower()
             if ($downloadedHash -ne $expectedSha256.ToLower()) {
                 Remove-Item -Path $tempPath -Force
