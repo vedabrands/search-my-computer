@@ -855,7 +855,24 @@ Evaluation run with ONNX embeddings enabled (`bge-small-en-v1.5` int8):
 
 ---
 
-## Chunk 12: Floating Status-Bar UI Shell (Completed)
+## Release Automation & CI/CD Pipeline (Completed)
+
+### Done
+- **GitHub Actions Windows Release Workflow (`.github/workflows/build.yml`)**:
+  - Implemented automated Windows CI/CD matrix targeting `windows-latest` runners for release installer builds.
+  - Setup Node.js 20 with `npm` dependency caching and Rust stable toolchain targeting `x86_64-pc-windows-msvc`.
+  - Configured workspace-level compilation caching with `Swatinem/rust-cache@v2`.
+  - Automated WiX Toolset v3.11 detection and installation via Chocolatey for MSI builds.
+  - Build-time deterministic ONNX model fetching (`pwsh -File scripts/fetch_models.ps1`) verifying SHA-256 checksums from `models.lock` before compilation.
+  - Compiles full release bundle with `npm run tauri build -- --verbose` generating standalone NSIS (`.exe`) and WiX (`.msi`) installers.
+  - Automated installer artifact uploads via `actions/upload-artifact@v4` producing downloadable `SearchMyComputer-NSIS-Installer` and `SearchMyComputer-MSI-Installer` build artifacts.
+- **Packaging Hardening & Fixes**:
+  - Configured recursive glob patterns (`../models/**/*`, `../pdfium.dll`) in `src-tauri/tauri.conf.json` for deterministic resource bundling.
+  - Committed verified `Cargo.lock` to guarantee exact crate dependency versions across local and CI builds.
+  - Tuned `Cargo.toml` `[profile.release]` with `opt-level = 3` to prevent MSVC proc-macro symbol stripping.
+- **Repository Setup Script (`setup-github.ps1`)**:
+  - Added automated PowerShell setup script for Git initialization, staging, branch configuration (`main`), and upstream pushing to GitHub.
+
 
 ### Done
 - **Frameless Micro Status Pill Window (`src/components/StatusPill.tsx`, `src-tauri/src/hotkey.rs`, `src/App.css`)**:
