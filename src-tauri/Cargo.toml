@@ -1,0 +1,34 @@
+[package]
+name = "search-my-computer"
+version.workspace = true
+edition.workspace = true
+default-run = "search-my-computer"
+
+[dependencies]
+smc-core = { path = "../crates/smc-core" }
+smc-extract = { path = "../crates/smc-extract" }
+smc-embed = { path = "../crates/smc-embed" }
+smc-search = { path = "../crates/smc-search" }
+smc-nlq = { path = "../crates/smc-nlq" }
+smc-vision = { path = "../crates/smc-vision" }
+smc-license = { path = "../crates/smc-license" }
+smc-stt = { path = "../crates/smc-stt" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+rusqlite = { workspace = true }
+chrono = { workspace = true }
+uuid = { workspace = true }
+
+tauri = { version = "2.0.0", features = ["tray-icon"] }
+tauri-plugin-global-shortcut = "2.0.0"
+tauri-plugin-opener = "2.0.0"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+tracing-appender = "0.2"
+parking_lot = "0.12"
+directories = "5"
+globset = "0.4"
+
+[build-dependencies]
+tauri-build = { version = "2.0.0", features = [] }

@@ -1,0 +1,22 @@
+[package]
+name = "smc-embed"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+smc-core = { path = "../smc-core" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+parking_lot = { workspace = true }
+rusqlite = { workspace = true }
+chrono = { workspace = true }
+ort = { version = "2.0.0-rc.9", default-features = false, features = ["download-binaries", "copy-dylibs", "tls-native"] }
+tokenizers = { version = "0.21", default-features = false, features = ["onig"] }
+sha2 = "0.10"
+half = { version = "2.4", features = ["serde"] }
+
+[dev-dependencies]
+tempfile = { workspace = true }
+sysinfo = "0.33"

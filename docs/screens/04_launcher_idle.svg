@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" width="800" height="520" style="background:transparent; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="windowShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+    <linearGradient id="launcherBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14161f"/>
+      <stop offset="100%" stop-color="#0d0e14"/>
+    </linearGradient>
+    <linearGradient id="searchBarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1c1f2e"/>
+      <stop offset="100%" stop-color="#161824"/>
+    </linearGradient>
+  </defs>
+
+  <!-- App Window Container with Shadow & Rounded Corners -->
+  <g filter="url(#windowShadow)">
+    <rect x="30" y="20" width="740" height="470" rx="14" fill="url(#launcherBg)" stroke="#262938" stroke-width="1.5"/>
+
+    <!-- Search Input Bar -->
+    <g transform="translate(46, 36)">
+      <rect x="0" y="0" width="708" height="54" rx="10" fill="url(#searchBarBg)" stroke="#334155" stroke-width="1.5"/>
+      <text x="20" y="33" fill="#60a5fa" font-size="20">🔍</text>
+      <text x="52" y="33" fill="#64748b" font-size="16">Search files, code, docs, images... (type "help" for tips)</text>
+
+      <!-- Hotkey badge -->
+      <rect x="635" y="14" width="58" height="26" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="664" y="31" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">Alt+Space</text>
+    </g>
+
+    <!-- Empty / Idle Content Area -->
+    <g transform="translate(56, 120)">
+      <!-- Section: Recent Searches -->
+      <text x="0" y="0" fill="#94a3b8" font-size="12" font-weight="600" letter-spacing="0.5">RECENT SEARCHES</text>
+      <text x="688" y="0" fill="#64748b" font-size="11" text-anchor="end" cursor="pointer">Clear</text>
+
+      <!-- Recent Search Items -->
+      <g transform="translate(0, 16)">
+        <rect x="0" y="0" width="688" height="42" rx="8" fill="#181a24" stroke="#222533" stroke-width="1"/>
+        <text x="16" y="26" fill="#60a5fa" font-size="14">🕒</text>
+        <text x="42" y="26" fill="#f1f5f9" font-size="13" font-weight="500">rust async engine</text>
+        <text x="665" y="26" fill="#64748b" font-size="13" text-anchor="end">✕</text>
+      </g>
+
+      <g transform="translate(0, 66)">
+        <rect x="0" y="0" width="688" height="42" rx="8" fill="#181a24" stroke="#222533" stroke-width="1"/>
+        <text x="16" y="26" fill="#60a5fa" font-size="14">🕒</text>
+        <text x="42" y="26" fill="#f1f5f9" font-size="13" font-weight="500">quarterly budget pdf</text>
+        <text x="665" y="26" fill="#64748b" font-size="13" text-anchor="end">✕</text>
+      </g>
+
+      <!-- Section: Suggested Queries / Filters -->
+      <g transform="translate(0, 140)">
+        <text x="0" y="0" fill="#94a3b8" font-size="12" font-weight="600" letter-spacing="0.5">TRY SEARCHING FOR</text>
+
+        <g transform="translate(0, 16)">
+          <!-- Suggestion Pill 1 -->
+          <rect x="0" y="0" width="220" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+          <text x="14" y="21" fill="#f8fafc" font-size="12">where is my NutriGrade project</text>
+
+          <!-- Suggestion Pill 2 -->
+          <rect x="230" y="0" width="180" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+          <text x="244" y="21" fill="#f8fafc" font-size="12">find AI agent whitepaper</text>
+
+          <!-- Suggestion Pill 3 -->
+          <rect x="420" y="0" width="180" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+          <text x="434" y="21" fill="#f8fafc" font-size="12">screenshots with payment QR</text>
+        </g>
+      </g>
+
+      <!-- Quick Action Badges -->
+      <g transform="translate(0, 220)">
+        <text x="0" y="0" fill="#94a3b8" font-size="12" font-weight="600" letter-spacing="0.5">KEYBOARD SHORTCUTS</text>
+        <g transform="translate(0, 16)">
+          <rect x="0" y="0" width="125" height="28" rx="6" fill="#13151f" stroke="#262938" stroke-width="1"/>
+          <text x="10" y="18" fill="#60a5fa" font-size="11" font-weight="600">Ctrl+K</text>
+          <text x="54" y="18" fill="#94a3b8" font-size="11">Actions</text>
+
+          <rect x="135" y="0" width="125" height="28" rx="6" fill="#13151f" stroke="#262938" stroke-width="1"/>
+          <text x="145" y="18" fill="#60a5fa" font-size="11" font-weight="600">Ctrl+,</text>
+          <text x="185" y="18" fill="#94a3b8" font-size="11">Settings</text>
+
+          <rect x="270" y="0" width="115" height="28" rx="6" fill="#13151f" stroke="#262938" stroke-width="1"/>
+          <text x="280" y="18" fill="#60a5fa" font-size="11" font-weight="600">Esc</text>
+          <text x="308" y="18" fill="#94a3b8" font-size="11">Hide</text>
+        </g>
+      </g>
+    </g>
+
+    <!-- Footer / Status Bar -->
+    <g transform="translate(30, 448)">
+      <rect x="0" y="0" width="740" height="42" fill="#0d0e14" stroke="#262938" stroke-width="1"/>
+      <circle cx="28" cy="21" r="4" fill="#10b981"/>
+      <text x="40" y="25" fill="#94a3b8" font-size="12">Ready • 1,428 files indexed (3 folders)</text>
+
+      <text x="715" y="25" fill="#64748b" font-size="12" text-anchor="end">SearchMyComputer v0.9.0</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,21 @@
+[package]
+name = "smc-search"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+smc-core = { path = "../smc-core" }
+smc-embed = { path = "../smc-embed" }
+smc-nlq = { path = "../smc-nlq" }
+smc-vision = { path = "../smc-vision" }
+half = { version = "2.4", features = ["serde"] }
+sha2 = "0.10"
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+rusqlite = { workspace = true }
+chrono = { workspace = true }
+
+[dev-dependencies]
+tempfile = { workspace = true }

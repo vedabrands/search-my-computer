@@ -1,0 +1,38 @@
+[workspace]
+resolver = "2"
+members = [
+    "src-tauri",
+    "crates/smc-core",
+    "crates/smc-extract",
+    "crates/smc-embed",
+    "crates/smc-search",
+    "crates/smc-nlq",
+    "crates/smc-eval",
+    "crates/smc-vision",
+    "crates/smc-license",
+    "crates/license-tool",
+    "crates/smc-stt",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2024"
+license = "Proprietary"
+
+[workspace.dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+tracing = { version = "0.1" }
+thiserror = "2"
+parking_lot = "0.12"
+rusqlite = { version = "0.32", features = ["bundled", "backup", "column_decltype"] }
+chrono = { version = "0.4", default-features = false, features = ["clock", "serde"] }
+uuid = { version = "1", features = ["v4"] }
+tempfile = "3"
+ed25519-dalek = { version = "2", features = ["std"] }
+
+[profile.release]
+lto = "thin"
+strip = "symbols"
+codegen-units = 1

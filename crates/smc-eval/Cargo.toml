@@ -1,0 +1,23 @@
+[package]
+name = "smc-eval"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+smc-core = { path = "../smc-core" }
+smc-extract = { path = "../smc-extract" }
+smc-embed = { path = "../smc-embed" }
+smc-search = { path = "../smc-search" }
+serde = { workspace = true, features = ["derive"] }
+serde_json = { workspace = true }
+toml = { workspace = true }
+tracing = { workspace = true }
+rusqlite = { workspace = true }
+chrono = { workspace = true }
+tempfile = { workspace = true }
+zip = { version = "2", default-features = false, features = ["deflate"] }
+walkdir = "2"
+
+[[bin]]
+name = "smc-eval"
+path = "src/main.rs"

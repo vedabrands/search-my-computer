@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" width="760" height="520" style="background:transparent; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="menuShadow6" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <linearGradient id="modalBg6" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#141620"/>
+      <stop offset="100%" stop-color="#0d0e14"/>
+    </linearGradient>
+    <linearGradient id="activeRowGrad6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1e3a8a"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#menuShadow6)">
+    <!-- Modal Container -->
+    <rect x="30" y="20" width="700" height="480" rx="14" fill="url(#modalBg6)" stroke="#2d3248" stroke-width="1.5"/>
+
+    <!-- Actions Header -->
+    <g transform="translate(56, 45)">
+      <text x="0" y="0" fill="#f8fafc" font-size="18" font-weight="700">Actions Menu</text>
+      <text x="0" y="22" fill="#94a3b8" font-size="12">Target: <tspan fill="#60a5fa" font-family="monospace">AI_Agent_Architecture_Whitepaper_v2.pdf</tspan></text>
+      <rect x="535" y="-18" width="52" height="24" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <text x="561" y="-2" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">Ctrl+K</text>
+    </g>
+
+    <line x1="56" y1="88" x2="644" y2="88" stroke="#222533" stroke-width="1"/>
+
+    <!-- Action Items List -->
+    <g transform="translate(56, 105)">
+      <!-- Action 1 (Selected) -->
+      <g transform="translate(0, 0)">
+        <rect x="0" y="0" width="588" height="46" rx="8" fill="url(#activeRowGrad6)"/>
+        <text x="18" y="28" fill="#ffffff" font-size="16">⚡</text>
+        <text x="48" y="28" fill="#ffffff" font-size="13" font-weight="600">Open with Default Application</text>
+        <rect x="525" y="11" width="48" height="24" rx="4" fill="#1d4ed8"/>
+        <text x="549" y="27" fill="#ffffff" font-size="11" font-family="monospace" font-weight="bold" text-anchor="middle">Enter</text>
+      </g>
+
+      <!-- Action 2 -->
+      <g transform="translate(0, 54)">
+        <rect x="0" y="0" width="588" height="46" rx="8" fill="#13151f" stroke="#222533" stroke-width="1"/>
+        <text x="18" y="28" fill="#60a5fa" font-size="16">📂</text>
+        <text x="48" y="28" fill="#e2e8f0" font-size="13" font-weight="500">Reveal in File Explorer</text>
+        <rect x="515" y="11" width="58" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="544" y="27" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">Ctrl+R</text>
+      </g>
+
+      <!-- Action 3 -->
+      <g transform="translate(0, 108)">
+        <rect x="0" y="0" width="588" height="46" rx="8" fill="#13151f" stroke="#222533" stroke-width="1"/>
+        <text x="18" y="28" fill="#60a5fa" font-size="16">💻</text>
+        <text x="48" y="28" fill="#e2e8f0" font-size="13" font-weight="500">Open Terminal Here (PowerShell)</text>
+        <rect x="515" y="11" width="58" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="544" y="27" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">Ctrl+T</text>
+      </g>
+
+      <!-- Action 4 -->
+      <g transform="translate(0, 162)">
+        <rect x="0" y="0" width="588" height="46" rx="8" fill="#13151f" stroke="#222533" stroke-width="1"/>
+        <text x="18" y="28" fill="#60a5fa" font-size="16">📋</text>
+        <text x="48" y="28" fill="#e2e8f0" font-size="13" font-weight="500">Copy Absolute File Path</text>
+        <rect x="515" y="11" width="58" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="544" y="27" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">Ctrl+C</text>
+      </g>
+
+      <!-- Action 5 -->
+      <g transform="translate(0, 216)">
+        <rect x="0" y="0" width="588" height="46" rx="8" fill="#13151f" stroke="#222533" stroke-width="1"/>
+        <text x="18" y="28" fill="#60a5fa" font-size="16">🔄</text>
+        <text x="48" y="28" fill="#e2e8f0" font-size="13" font-weight="500">Force Re-index This File / Folder</text>
+        <rect x="525" y="11" width="48" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="549" y="27" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">F5</text>
+      </g>
+
+      <!-- Action 6 -->
+      <g transform="translate(0, 270)">
+        <rect x="0" y="0" width="588" height="46" rx="8" fill="#13151f" stroke="#222533" stroke-width="1"/>
+        <text x="18" y="28" fill="#60a5fa" font-size="16">⚙️</text>
+        <text x="48" y="28" fill="#e2e8f0" font-size="13" font-weight="500">Open Settings &amp; Preferences</text>
+        <rect x="515" y="11" width="58" height="24" rx="4" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="544" y="27" fill="#94a3b8" font-size="11" font-family="monospace" text-anchor="middle">Ctrl+,</text>
+      </g>
+    </g>
+
+    <!-- Footer Guide -->
+    <g transform="translate(56, 455)">
+      <text x="0" y="0" fill="#64748b" font-size="11">Use <tspan fill="#94a3b8" font-weight="600">↑↓ Arrow Keys</tspan> to navigate • <tspan fill="#94a3b8" font-weight="600">Enter</tspan> to execute • <tspan fill="#94a3b8" font-weight="600">Esc</tspan> to close</text>
+    </g>
+  </g>
+</svg>

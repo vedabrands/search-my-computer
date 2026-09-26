@@ -1,0 +1,100 @@
+\# CLAUDE.md: SearchMyComputer
+
+
+
+\## Product
+
+A local semantic search launcher for laptops. User presses a global hotkey (default Alt+Space),
+
+types a natural-language query ("find that PDF about AI agents I downloaded last month",
+
+"where is my NutriGrade project", "screenshots with a payment QR") and gets files ranked
+
+by hybrid keyword + semantic search across filenames, documents, PDFs, code, and images.
+
+
+
+\## Hard constraints (never violate)
+
+\- 100% local. No network calls at runtime. No telemetry. No cloud APIs. No auto-update pinging a server.
+
+\- CPU-only. No GPU requirement. Must run on a mid-range laptop (4 cores, 8 GB RAM).
+
+\- The AI is a very small embedding model (int8 ONNX). No generative LLM in v1.
+
+\- Models are fetched at BUILD/DEV time by a script and bundled in the installer. Never downloaded by the running app.
+
+\- All user data (index DB, settings, logs) lives in the OS app-data dir with user-only permissions.
+
+\- The user must be able to pause indexing, exclude folders, and delete all data.
+
+
+
+\## Stack
+
+\- Tauri 2 (Rust) + React + TypeScript + Vite
+
+\- Cargo workspace: src-tauri (app), crates/smc-core (db, jobs, config), crates/smc-extract (file parsing/chunking),
+
+&#x20; crates/smc-embed (ONNX embeddings), crates/smc-search (hybrid ranking), crates/smc-nlq (query parsing),
+
+&#x20; crates/smc-vision (OCR/QR/CLIP, added later)
+
+\- SQLite (FTS5 + vector index behind a `VectorIndex` trait)
+
+\- ONNX Runtime via the `ort` crate, `tokenizers` crate for tokenization
+
+
+
+\## Licensing rule (I sell this commercially)
+
+\- Allowed dependency licenses: MIT, Apache-2.0, BSD-2/3, ISC, Zlib, MPL-2.0, Unlicense, CC0.
+
+\- NOT allowed: GPL, AGPL, LGPL (unless I approve), SSPL, "research only" / non-commercial licenses.
+
+&#x20; Example: do NOT use MuPDF/PyMuPDF (AGPL). Use pdfium.
+
+\- Ask me before adding ANY new dependency; state name, purpose, and license.
+
+\- Maintain THIRD\_PARTY\_LICENSES.md and update it whenever dependencies or models change.
+
+
+
+\## Performance budgets
+
+\- Query latency < 200 ms warm; idle RAM < 150 MB with model unloaded; indexing <= 2 threads by default.
+
+
+
+\## Privacy defaults
+
+\- Default exclusions: node\_modules, .git internals, caches, temp, system folders, browser profiles,
+
+&#x20; password-manager data, .ssh, .gnupg, and other credential stores.
+
+\- Never log file contents or full query text at info level.
+
+
+
+\## Working rules
+
+1\. Read docs/PROGRESS.md at the start. Update it at the end (what was done, decisions, known issues, measurements).
+
+2\. Plan first: show a short plan and wait for my OK before large changes.
+
+3\. Small, focused commits. Never leave the build or tests red.
+
+4\. Write tests for logic (parsers, ranking, chunking, date parsing). Run cargo fmt, clippy, and frontend lint before finishing.
+
+5\. If something is ambiguous, ask instead of guessing.
+
+6\. Do not commit model files, big fixtures (> 1 MB), or secrets.
+
+7\. Keep OS-specific code behind traits/modules so macOS/Linux can be added later.
+
+
+
+\## Definition of done (every chunk)
+
+\- Builds and runs on Windows. Tests pass. Lint clean. PROGRESS.md updated. A short "how to try it" is written.
+

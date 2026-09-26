@@ -1,0 +1,577 @@
+[metadata]
+name = "SearchMyComputer Benchmark Suite"
+version = "1.0.0"
+description = "Evaluation benchmark suite across exact-name, keyword, semantic, and mixed queries."
+
+# -----------------------------------------------------------------------------
+# Category 1: exact-name queries (~15 queries)
+# -----------------------------------------------------------------------------
+
+[[query]]
+id = "exact-01"
+query = "architecture.txt"
+query_type = "exact-name"
+expected_files = ["engineering/architecture.txt"]
+description = "Exact filename match for system architecture overview"
+
+[[query]]
+id = "exact-02"
+query = "vector_index.rs"
+query_type = "exact-name"
+expected_files = ["code/vector_index.rs"]
+description = "Exact filename match for vector index source"
+
+[[query]]
+id = "exact-03"
+query = "payment_gateway.ts"
+query_type = "exact-name"
+expected_files = ["code/payment_gateway.ts"]
+description = "Exact filename match for TypeScript payment gateway service"
+
+[[query]]
+id = "exact-04"
+query = "model_quantization.py"
+query_type = "exact-name"
+expected_files = ["code/model_quantization.py"]
+description = "Exact Python script name for ONNX model quantization"
+
+[[query]]
+id = "exact-05"
+query = "q3_financial_report_2024.pdf"
+query_type = "exact-name"
+expected_files = ["finance/q3_financial_report_2024.pdf"]
+description = "Exact PDF report filename"
+
+[[query]]
+id = "exact-06"
+query = "soc2_compliance_report.pdf"
+query_type = "exact-name"
+expected_files = ["legal_compliance/soc2_compliance_report.pdf"]
+description = "Exact SOC2 compliance report PDF"
+
+[[query]]
+id = "exact-07"
+query = "budget_allocation_q4_2024.docx"
+query_type = "exact-name"
+expected_files = ["finance/budget_allocation_q4_2024.docx"]
+description = "Exact DOCX budget allocation document"
+
+[[query]]
+id = "exact-08"
+query = "kubernetes_production_cluster.yaml"
+query_type = "exact-name"
+expected_files = ["infrastructure_ops/kubernetes_production_cluster.yaml"]
+description = "Exact K8s manifest filename"
+
+[[query]]
+id = "exact-09"
+query = "terraform_aws_infrastructure.tf"
+query_type = "exact-name"
+expected_files = ["infrastructure_ops/terraform_aws_infrastructure.tf"]
+description = "Exact Terraform configuration file"
+
+[[query]]
+id = "exact-10"
+query = "product_roadmap_2025_vision.pptx"
+query_type = "exact-name"
+expected_files = ["product_design/product_roadmap_2025_vision.pptx"]
+description = "Exact PPTX presentation roadmap filename"
+
+[[query]]
+id = "exact-11"
+query = "executive_compensation_salary_bands.xlsx"
+query_type = "exact-name"
+expected_files = ["finance/executive_compensation_salary_bands.xlsx"]
+description = "Exact Excel salary bands spreadsheet"
+
+[[query]]
+id = "exact-12"
+query = "fast_matrix_multiply.cpp"
+query_type = "exact-name"
+expected_files = ["code/fast_matrix_multiply.cpp"]
+description = "Exact C++ AVX2 kernel source"
+
+[[query]]
+id = "exact-13"
+query = "grpc_server.go"
+query_type = "exact-name"
+expected_files = ["code/grpc_server.go"]
+description = "Exact Go gRPC server source"
+
+[[query]]
+id = "exact-14"
+query = "schema_migrations.sql"
+query_type = "exact-name"
+expected_files = ["code/schema_migrations.sql"]
+description = "Exact SQL schema migrations file"
+
+[[query]]
+id = "exact-15"
+query = "gdpr_data_retention_policy.docx"
+query_type = "exact-name"
+expected_files = ["legal_compliance/gdpr_data_retention_policy.docx"]
+description = "Exact GDPR policy document filename"
+
+# -----------------------------------------------------------------------------
+# Category 2: keyword queries (~15 queries)
+# -----------------------------------------------------------------------------
+
+[[query]]
+id = "keyword-01"
+query = "EBITDA margin SaaS subscriptions"
+query_type = "keyword"
+expected_files = ["finance/q3_financial_report_2024.pdf"]
+description = "Keyword search for EBITDA margin in financial report"
+
+[[query]]
+id = "keyword-02"
+query = "PaymentIntentRequest idempotencyKey"
+query_type = "keyword"
+expected_files = ["code/payment_gateway.ts"]
+description = "Code identifiers in payment gateway service"
+
+[[query]]
+id = "keyword-03"
+query = "quantize_dynamic QuantType QInt8"
+query_type = "keyword"
+expected_files = ["code/model_quantization.py"]
+description = "ONNX quantization method keywords"
+
+[[query]]
+id = "keyword-04"
+query = "UnimplementedSearchServiceServer 50051"
+query_type = "keyword"
+expected_files = ["code/grpc_server.go"]
+description = "Go gRPC server struct and port number"
+
+[[query]]
+id = "keyword-05"
+query = "avx2_matrix_multiply SIMD intrinsics"
+query_type = "keyword"
+expected_files = ["code/fast_matrix_multiply.cpp"]
+description = "C++ AVX2 matrix multiply keywords"
+
+[[query]]
+id = "keyword-06"
+query = "trigram tokenizer chunks_fts"
+query_type = "keyword"
+expected_files = ["code/schema_migrations.sql", "engineering/database_migration_v2_plan.pdf"]
+description = "Database schema trigram FTS5 table keywords"
+
+[[query]]
+id = "keyword-07"
+query = "SOC 2 Type II 48 evaluated controls"
+query_type = "keyword"
+expected_files = ["legal_compliance/soc2_compliance_report.pdf"]
+description = "Specific audit keywords from SOC2 compliance report"
+
+[[query]]
+id = "keyword-08"
+query = "Article 17 Right to Erasure"
+query_type = "keyword"
+expected_files = ["legal_compliance/gdpr_data_retention_policy.docx"]
+description = "GDPR article keyword in legal policy"
+
+[[query]]
+id = "keyword-09"
+query = "123456789.dkr.ecr.us-east-1.amazonaws.com"
+query_type = "keyword"
+expected_files = ["infrastructure_ops/kubernetes_production_cluster.yaml"]
+description = "Exact ECR container registry URL in K8s deployment"
+
+[[query]]
+id = "keyword-10"
+query = "api.searchmycomputer.internal"
+query_type = "keyword"
+expected_files = ["infrastructure_ops/nginx_reverse_proxy.conf"]
+description = "Internal domain name in Nginx config"
+
+[[query]]
+id = "keyword-11"
+query = "HTTP 500 connection pool exhaustion RAII"
+query_type = "keyword"
+expected_files = ["infrastructure_ops/incident_postmortem_connection_pool_leak.md"]
+description = "Incident postmortem error and resolution keywords"
+
+[[query]]
+id = "keyword-12"
+query = "Staff Software Engineer 215,000"
+query_type = "keyword"
+expected_files = ["finance/executive_compensation_salary_bands.xlsx"]
+description = "Exact salary band figure for L6 engineer in spreadsheet"
+
+[[query]]
+id = "keyword-13"
+query = "INV-9821 Stripe_Processing 42850.00"
+query_type = "keyword"
+expected_files = ["finance/accounts_payable_ledger_october.csv"]
+description = "Invoice number and dollar amount in CSV ledger"
+
+[[query]]
+id = "keyword-14"
+query = "bge-small-en-v1.5 bi-encoder 15ms"
+query_type = "keyword"
+expected_files = ["research_ai/transformer_rag_whitepaper.pdf"]
+description = "Model name and benchmark metrics in research paper"
+
+[[query]]
+id = "keyword-15"
+query = "calculate_mrr reciprocal_ranks"
+query_type = "keyword"
+expected_files = ["research_ai/evaluate_reranking_cross_encoder.py"]
+description = "Python evaluation function keywords"
+
+# -----------------------------------------------------------------------------
+# Category 3: semantic queries (~15 queries)
+# -----------------------------------------------------------------------------
+
+[[query]]
+id = "semantic-01"
+query = "how much money did the company make in the third quarter"
+query_type = "semantic"
+expected_files = ["finance/q3_financial_report_2024.pdf"]
+description = "Natural language question about Q3 earnings"
+
+[[query]]
+id = "semantic-03"
+query = "how do we handle customer credit card checkout"
+query_type = "semantic"
+expected_files = ["code/payment_gateway.ts"]
+description = "Semantic intent query for payment processing"
+
+[[query]]
+id = "semantic-04"
+query = "compressing transformer weights to 8 bit integers for faster CPU execution"
+query_type = "semantic"
+expected_files = ["code/model_quantization.py", "research_ai/transformer_rag_whitepaper.pdf"]
+description = "Semantic description of ONNX dynamic quantization"
+
+[[query]]
+id = "semantic-05"
+query = "what happens when our primary server crashes in production"
+query_type = "semantic"
+expected_files = ["engineering/high_availability_disaster_recovery_runbook.docx"]
+description = "Semantic query for disaster recovery failover steps"
+
+[[query]]
+id = "semantic-06"
+query = "audit report proving our security standards and customer data isolation"
+query_type = "semantic"
+expected_files = ["legal_compliance/soc2_compliance_report.pdf"]
+description = "Semantic query for SOC2 certification"
+
+[[query]]
+id = "semantic-07"
+query = "deleting personal data when a customer asks to be forgotten"
+query_type = "semantic"
+expected_files = ["legal_compliance/gdpr_data_retention_policy.docx"]
+description = "Semantic query for GDPR data deletion right to erasure"
+
+[[query]]
+id = "semantic-08"
+query = "confidentiality agreement before discussing proprietary tech"
+query_type = "semantic"
+expected_files = ["legal_compliance/standard_mutual_nda_template.docx"]
+description = "Semantic query for mutual NDA template"
+
+[[query]]
+id = "semantic-09"
+query = "what keyboard shortcuts can I use in the search launcher"
+query_type = "semantic"
+expected_files = ["product_design/prd_launcher_ui_shortcuts.docx"]
+description = "Semantic query for launcher hotkey navigation PRD"
+
+[[query]]
+id = "semantic-10"
+query = "future plans for visual search OCR and screenshots"
+query_type = "semantic"
+expected_files = ["product_design/product_roadmap_2025_vision.pptx"]
+description = "Semantic query for product vision roadmap"
+
+[[query]]
+id = "semantic-11"
+query = "how much do we pay staff level software engineers"
+query_type = "semantic"
+expected_files = ["finance/executive_compensation_salary_bands.xlsx"]
+description = "Semantic query for L6 engineering compensation"
+
+[[query]]
+id = "semantic-12"
+query = "why did the search api go down last month"
+query_type = "semantic"
+expected_files = ["infrastructure_ops/incident_postmortem_connection_pool_leak.md"]
+description = "Semantic query for outage postmortem"
+
+[[query]]
+id = "semantic-13"
+query = "how to run embedding models without high memory usage on laptops"
+query_type = "semantic"
+expected_files = ["research_ai/onnx_runtime_cpu_optimization.md", "research_ai/transformer_rag_whitepaper.pdf"]
+description = "Semantic query for ONNX CPU optimization tips"
+
+[[query]]
+id = "semantic-14"
+query = "how is reciprocal rank fusion implemented to merge search results"
+query_type = "semantic"
+expected_files = ["engineering/rfc_004_hybrid_ranking_fusion.md"]
+description = "Semantic query for RRF algorithm RFC"
+
+[[query]]
+id = "semantic-15"
+query = "what was discussed in today's engineering standup"
+query_type = "semantic"
+expected_files = ["daily_notes_logs/standup_meeting_notes_today.md"]
+description = "Semantic query for standup meeting notes"
+
+# -----------------------------------------------------------------------------
+# Category 4: mixed queries (~15 queries)
+# -----------------------------------------------------------------------------
+
+[[query]]
+id = "mixed-01"
+query = "q3 report pdf"
+query_type = "mixed"
+expected_files = ["finance/q3_financial_report_2024.pdf"]
+description = "Part filename keyword + part extension"
+
+[[query]]
+id = "mixed-02"
+query = "budget docx q4"
+query_type = "mixed"
+expected_files = ["finance/budget_allocation_q4_2024.docx"]
+description = "Document type and quarter name"
+
+[[query]]
+id = "mixed-03"
+query = "roadmap pptx 2025"
+query_type = "mixed"
+expected_files = ["product_design/product_roadmap_2025_vision.pptx"]
+description = "Presentation file type with year"
+
+[[query]]
+id = "mixed-04"
+query = "salary bands xlsx"
+query_type = "mixed"
+expected_files = ["finance/executive_compensation_salary_bands.xlsx"]
+description = "Spreadsheet keywords and extension"
+
+[[query]]
+id = "mixed-05"
+query = "soc2 pdf compliance"
+query_type = "mixed"
+expected_files = ["legal_compliance/soc2_compliance_report.pdf"]
+description = "Audit topic with pdf extension"
+
+[[query]]
+id = "mixed-06"
+query = "payment stripe ts"
+query_type = "mixed"
+expected_files = ["code/payment_gateway.ts"]
+description = "Code service with TypeScript extension"
+
+[[query]]
+id = "mixed-07"
+query = "quantization python script"
+query_type = "mixed"
+expected_files = ["code/model_quantization.py"]
+description = "ML task with language keyword"
+
+[[query]]
+id = "mixed-08"
+query = "vector index rs"
+query_type = "mixed"
+expected_files = ["code/vector_index.rs"]
+description = "Rust vector index source"
+
+[[query]]
+id = "mixed-09"
+query = "kubernetes cluster yaml"
+query_type = "mixed"
+expected_files = ["infrastructure_ops/kubernetes_production_cluster.yaml"]
+description = "DevOps manifest with yaml extension"
+
+[[query]]
+id = "mixed-10"
+query = "terraform aws tf"
+query_type = "mixed"
+expected_files = ["infrastructure_ops/terraform_aws_infrastructure.tf"]
+description = "Infrastructure code with tf extension"
+
+[[query]]
+id = "mixed-11"
+query = "nginx conf proxy"
+query_type = "mixed"
+expected_files = ["infrastructure_ops/nginx_reverse_proxy.conf"]
+description = "Webserver config and extension"
+
+[[query]]
+id = "mixed-12"
+query = "disaster recovery docx"
+query_type = "mixed"
+expected_files = ["engineering/high_availability_disaster_recovery_runbook.docx"]
+description = "Runbook topic and Word document format"
+
+[[query]]
+id = "mixed-13"
+query = "standup notes md"
+query_type = "mixed"
+expected_files = ["daily_notes_logs/standup_meeting_notes_today.md"]
+description = "Meeting notes with markdown extension"
+
+[[query]]
+id = "mixed-14"
+query = "outage postmortem connection leak"
+query_type = "mixed"
+expected_files = ["infrastructure_ops/incident_postmortem_connection_pool_leak.md"]
+description = "Incident type with error topic"
+
+[[query]]
+id = "mixed-15"
+query = "rag whitepaper pdf"
+query_type = "mixed"
+expected_files = ["research_ai/transformer_rag_whitepaper.pdf"]
+description = "Research topic with pdf extension"
+
+# -----------------------------------------------------------------------------
+# Category 5: natural language queries (20 queries)
+# -----------------------------------------------------------------------------
+
+[[query]]
+id = "nlq-01"
+query = "find that pdf about Q3 financial performance and revenue"
+query_type = "nlq"
+expected_files = ["finance/q3_financial_report_2024.pdf"]
+description = "Natural language query with PDF format and financial performance keywords"
+
+[[query]]
+id = "nlq-02"
+query = "where is the excel sheet with staff engineer salary bands"
+query_type = "nlq"
+expected_files = ["finance/executive_compensation_salary_bands.xlsx"]
+description = "Natural language query for spreadsheet containing engineering compensation"
+
+[[query]]
+id = "nlq-03"
+query = "show me the word document about q4 budget allocation"
+query_type = "nlq"
+expected_files = ["finance/budget_allocation_q4_2024.docx"]
+description = "Natural language query for Word doc about Q4 budget plan"
+
+[[query]]
+id = "nlq-04"
+query = "find soc2 compliance audit report pdf"
+query_type = "nlq"
+expected_files = ["legal_compliance/soc2_compliance_report.pdf"]
+description = "Natural language query for SOC2 audit compliance PDF"
+
+[[query]]
+id = "nlq-05"
+query = "find the word doc regarding gdpr data retention policy"
+query_type = "nlq"
+expected_files = ["legal_compliance/gdpr_data_retention_policy.docx"]
+description = "Natural language query for GDPR data retention Word policy"
+
+[[query]]
+id = "nlq-06"
+query = "where is our standard mutual nda template document"
+query_type = "nlq"
+expected_files = ["legal_compliance/standard_mutual_nda_template.docx"]
+description = "Natural language query for mutual NDA template doc"
+
+[[query]]
+id = "nlq-07"
+query = "find the python script for onnx model quantization"
+query_type = "nlq"
+expected_files = ["code/model_quantization.py"]
+description = "Natural language query with Python script type filter for model quantization"
+
+[[query]]
+id = "nlq-08"
+query = "show me the typescript payment gateway code for stripe"
+query_type = "nlq"
+expected_files = ["code/payment_gateway.ts"]
+description = "Natural language query for TypeScript payment gateway service"
+
+[[query]]
+id = "nlq-09"
+query = "where is the rust vector index source file"
+query_type = "nlq"
+expected_files = ["code/vector_index.rs"]
+description = "Natural language query for Rust vector index implementation"
+
+[[query]]
+id = "nlq-10"
+query = "find the go grpc server code"
+query_type = "nlq"
+expected_files = ["code/grpc_server.go"]
+description = "Natural language query for Go gRPC server source"
+
+[[query]]
+id = "nlq-11"
+query = "where is the cpp file with avx2 matrix multiplication"
+query_type = "nlq"
+expected_files = ["code/fast_matrix_multiply.cpp"]
+description = "Natural language query for C++ AVX2 matrix multiply kernel"
+
+[[query]]
+id = "nlq-12"
+query = "find the sql schema migrations file with fts5"
+query_type = "nlq"
+expected_files = ["code/schema_migrations.sql"]
+description = "Natural language query for SQL schema migrations file"
+
+[[query]]
+id = "nlq-13"
+query = "show me the presentation slides for 2025 product roadmap vision"
+query_type = "nlq"
+expected_files = ["product_design/product_roadmap_2025_vision.pptx"]
+description = "Natural language query for PPTX product vision presentation"
+
+[[query]]
+id = "nlq-14"
+query = "find the prd docx about launcher ui shortcuts"
+query_type = "nlq"
+expected_files = ["product_design/prd_launcher_ui_shortcuts.docx"]
+description = "Natural language query for Word PRD covering launcher keyboard shortcuts"
+
+[[query]]
+id = "nlq-15"
+query = "where is the postmortem markdown file about connection pool exhaustion"
+query_type = "nlq"
+expected_files = ["infrastructure_ops/incident_postmortem_connection_pool_leak.md"]
+description = "Natural language query for markdown outage postmortem report"
+
+[[query]]
+id = "nlq-16"
+query = "show me the kubernetes cluster deployment yaml"
+query_type = "nlq"
+expected_files = ["infrastructure_ops/kubernetes_production_cluster.yaml"]
+description = "Natural language query for Kubernetes cluster YAML manifest"
+
+[[query]]
+id = "nlq-17"
+query = "find the terraform config for aws infrastructure"
+query_type = "nlq"
+expected_files = ["infrastructure_ops/terraform_aws_infrastructure.tf"]
+description = "Natural language query for Terraform AWS infrastructure config"
+
+[[query]]
+id = "nlq-18"
+query = "find that pdf whitepaper about transformer rag on edge devices"
+query_type = "nlq"
+expected_files = ["research_ai/transformer_rag_whitepaper.pdf"]
+description = "Natural language query for RAG edge device research whitepaper PDF"
+
+[[query]]
+id = "nlq-19"
+query = "where is the markdown guide for onnx runtime cpu optimization"
+query_type = "nlq"
+expected_files = ["research_ai/onnx_runtime_cpu_optimization.md"]
+description = "Natural language query for ONNX CPU optimization guide"
+
+[[query]]
+id = "nlq-20"
+query = "find the rfc document about reciprocal rank fusion ranking"
+query_type = "nlq"
+expected_files = ["engineering/rfc_004_hybrid_ranking_fusion.md"]
+description = "Natural language query for hybrid ranking RFC markdown document"

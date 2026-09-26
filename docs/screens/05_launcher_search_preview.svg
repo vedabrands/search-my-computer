@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" width="960" height="620" style="background:transparent; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <filter id="winShadow5" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="16" stdDeviation="24" flood-color="#000000" flood-opacity="0.65"/>
+    </filter>
+    <linearGradient id="panelGrad5" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#14161f"/>
+      <stop offset="100%" stop-color="#0d0e14"/>
+    </linearGradient>
+    <linearGradient id="selectedRowGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#1d283a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <g filter="url(#winShadow5)">
+    <!-- Main Window Background -->
+    <rect x="20" y="20" width="920" height="580" rx="14" fill="url(#panelGrad5)" stroke="#262938" stroke-width="1.5"/>
+
+    <!-- Search Input Bar with Filter Chips -->
+    <g transform="translate(36, 36)">
+      <rect x="0" y="0" width="888" height="64" rx="10" fill="#181a24" stroke="#3b82f6" stroke-width="1.5"/>
+      <text x="18" y="32" fill="#3b82f6" font-size="18">🔍</text>
+      <text x="48" y="32" fill="#f8fafc" font-size="16" font-weight="500">pdf in downloads ai agent architecture</text>
+
+      <!-- Active Filter Chips Row -->
+      <g transform="translate(48, 38)">
+        <!-- Chip 1: PDF -->
+        <rect x="0" y="0" width="46" height="18" rx="4" fill="#450a0a" stroke="#ef4444" stroke-width="0.8"/>
+        <text x="23" y="13" fill="#fca5a5" font-size="10" font-weight="600" text-anchor="middle">PDF</text>
+
+        <!-- Chip 2: Location -->
+        <rect x="52" y="0" width="90" height="18" rx="4" fill="#064e3b" stroke="#10b981" stroke-width="0.8"/>
+        <text x="97" y="13" fill="#6ee7b7" font-size="10" font-weight="600" text-anchor="middle">in downloads</text>
+
+        <!-- Chip 3: Semantic Match -->
+        <rect x="148" y="0" width="80" height="18" rx="4" fill="#1e1b4b" stroke="#6366f1" stroke-width="0.8"/>
+        <text x="188" y="13" fill="#c7d2fe" font-size="10" font-weight="600" text-anchor="middle">Semantic AI</text>
+      </g>
+    </g>
+
+    <!-- Split View Layout: Results List (Left) + Detail Preview (Right) -->
+    <!-- Left Column: Results List -->
+    <g transform="translate(36, 115)">
+      <!-- Project Result Card -->
+      <rect x="0" y="0" width="480" height="68" rx="8" fill="#1a1c29" stroke="#7c3aed" stroke-width="1.2"/>
+      <text x="16" y="28" font-size="18">📦</text>
+      <text x="46" y="28" fill="#f8fafc" font-size="14" font-weight="600">ai-agents-workspace</text>
+      <rect x="195" y="16" width="55" height="16" rx="4" fill="#2e1065" stroke="#a78bfa" stroke-width="0.8"/>
+      <text x="222" y="28" fill="#c4b5fd" font-size="9" font-weight="600" text-anchor="middle">PROJECT</text>
+      <text x="46" y="48" fill="#94a3b8" font-size="11">C:\Users\dev\Downloads\ai-agents-workspace</text>
+      <text x="465" y="28" fill="#a78bfa" font-size="11" font-weight="600" text-anchor="end">98%</text>
+
+      <!-- Result Item 1 (Selected) -->
+      <g transform="translate(0, 78)">
+        <rect x="0" y="0" width="480" height="62" rx="8" fill="url(#selectedRowGrad)" stroke="#3b82f6" stroke-width="1.5"/>
+        <text x="16" y="28" font-size="18">📄</text>
+        <text x="46" y="26" fill="#ffffff" font-size="13" font-weight="600">AI_Agent_Architecture_Whitepaper_v2.pdf</text>
+        <text x="46" y="46" fill="#93c5fd" font-size="11">...\Downloads • 2.4 MB • Modified 3 days ago</text>
+        <rect x="420" y="10" width="48" height="18" rx="4" fill="#1e3a8a"/>
+        <text x="444" y="23" fill="#60a5fa" font-size="10" font-weight="600" text-anchor="middle">Hybrid</text>
+      </g>
+
+      <!-- Result Item 2 -->
+      <g transform="translate(0, 148)">
+        <rect x="0" y="0" width="480" height="62" rx="8" fill="#13151f" stroke="#222533" stroke-width="1"/>
+        <text x="16" y="28" font-size="18">📄</text>
+        <text x="46" y="26" fill="#e2e8f0" font-size="13" font-weight="600">Autonomous_Agent_Design_Draft.pdf</text>
+        <text x="46" y="46" fill="#64748b" font-size="11">...\Downloads • 1.1 MB • Modified 2 weeks ago</text>
+        <text x="465" y="26" fill="#64748b" font-size="11" text-anchor="end">84%</text>
+      </g>
+
+      <!-- Result Item 3 -->
+      <g transform="translate(0, 218)">
+        <rect x="0" y="0" width="480" height="62" rx="8" fill="#13151f" stroke="#222533" stroke-width="1"/>
+        <text x="16" y="28" font-size="18">📄</text>
+        <text x="46" y="26" fill="#e2e8f0" font-size="13" font-weight="600">MultiAgent_Coordination_Specs.pdf</text>
+        <text x="46" y="46" fill="#64748b" font-size="11">...\Downloads • 890 KB • Modified 1 month ago</text>
+        <text x="465" y="26" fill="#64748b" font-size="11" text-anchor="end">76%</text>
+      </g>
+
+      <!-- Result Item 4 -->
+      <g transform="translate(0, 288)">
+        <rect x="0" y="0" width="480" height="62" rx="8" fill="#13151f" stroke="#222533" stroke-width="1"/>
+        <text x="16" y="28" font-size="18">📝</text>
+        <text x="46" y="26" fill="#e2e8f0" font-size="13" font-weight="600">agent_runtime_notes.md</text>
+        <text x="46" y="46" fill="#64748b" font-size="11">...\Downloads\docs • 14 KB • Modified yesterday</text>
+        <text x="465" y="26" fill="#64748b" font-size="11" text-anchor="end">72%</text>
+      </g>
+    </g>
+
+    <!-- Right Column: Detail Preview Pane -->
+    <g transform="translate(530, 115)">
+      <rect x="0" y="0" width="394" height="430" rx="8" fill="#11131a" stroke="#262938" stroke-width="1"/>
+
+      <!-- Preview Header -->
+      <g transform="translate(18, 20)">
+        <text x="0" y="16" fill="#f8fafc" font-size="15" font-weight="700">Preview</text>
+        <text x="0" y="36" fill="#60a5fa" font-size="12" font-weight="600">AI_Agent_Architecture_Whitepaper_v2.pdf</text>
+        <text x="0" y="54" fill="#94a3b8" font-size="11">Path: C:\Users\dev\Downloads\AI_Agent_Architecture_Whitepaper_v2.pdf</text>
+        <text x="0" y="70" fill="#94a3b8" font-size="11">Size: 2.4 MB • Match: Semantic Vector + Keyword FTS5</text>
+      </g>
+
+      <line x1="18" y1="102" x2="376" y2="102" stroke="#222533" stroke-width="1"/>
+
+      <!-- Extracted Text Snippet with Highlights -->
+      <g transform="translate(18, 118)">
+        <text x="0" y="14" fill="#94a3b8" font-size="11" font-weight="600">MATCHED TEXT SNIPPET</text>
+        <rect x="0" y="24" width="358" height="170" rx="6" fill="#0d0e14" stroke="#1e2230" stroke-width="1"/>
+        <text x="14" y="50" fill="#e2e8f0" font-size="12" font-family="monospace">"...Section 3.2 <tspan fill="#60a5fa" font-weight="bold">AI Agent Architecture</tspan></text>
+        <text x="14" y="70" fill="#e2e8f0" font-size="12" font-family="monospace">The autonomous agent coordinates</text>
+        <text x="14" y="90" fill="#e2e8f0" font-size="12" font-family="monospace">tools via zero-latency local IPC.</text>
+        <text x="14" y="110" fill="#e2e8f0" font-size="12" font-family="monospace">Memory persistence utilizes SQLite</text>
+        <text x="14" y="130" fill="#e2e8f0" font-size="12" font-family="monospace">hybrid vector embeddings and FTS5</text>
+        <text x="14" y="150" fill="#e2e8f0" font-size="12" font-family="monospace">BM25 index ranking..."</text>
+      </g>
+
+      <!-- Quick Action Buttons inside Preview -->
+      <g transform="translate(18, 330)">
+        <rect x="0" y="0" width="110" height="34" rx="6" fill="#2563eb"/>
+        <text x="55" y="21" fill="#ffffff" font-size="12" font-weight="600" text-anchor="middle">Open File ↵</text>
+
+        <rect x="120" y="0" width="120" height="34" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="180" y="21" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Show in Folder</text>
+
+        <rect x="250" y="0" width="108" height="34" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+        <text x="304" y="21" fill="#e2e8f0" font-size="12" font-weight="600" text-anchor="middle">Copy Path</text>
+      </g>
+
+      <!-- Action hint text -->
+      <text x="18" y="395" fill="#64748b" font-size="11">Press <tspan font-family="monospace" fill="#94a3b8">Ctrl+K</tspan> for full action menu (Terminal, Reveal, Share)</text>
+    </g>
+
+    <!-- Bottom Status Bar -->
+    <g transform="translate(20, 558)">
+      <rect x="0" y="0" width="920" height="42" fill="#0d0e14" stroke="#262938" stroke-width="1"/>
+      <text x="24" y="26" fill="#94a3b8" font-size="12">Found 8 results (6.2 ms) • ↑↓ Navigate • ↵ Open • Tab Preview • Esc Hide</text>
+      <text x="895" y="26" fill="#60a5fa" font-size="12" text-anchor="end">Hybrid Rank: BM25 + Vector</text>
+    </g>
+  </g>
+</svg>

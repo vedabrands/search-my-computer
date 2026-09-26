@@ -1,0 +1,27 @@
+[package]
+name = "smc-vision"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+smc-core = { path = "../smc-core" }
+smc-extract = { path = "../smc-extract" }
+serde = { workspace = true }
+serde_json = { workspace = true }
+tracing = { workspace = true }
+thiserror = { workspace = true }
+parking_lot = { workspace = true }
+rusqlite = { workspace = true }
+chrono = { workspace = true }
+# Vision dependencies
+image = { version = "0.25", default-features = true }
+rxing = "0.5"
+kamadak-exif = "0.5"
+ort = { version = "2.0.0-rc.9", default-features = false, features = ["download-binaries", "copy-dylibs", "tls-native"] }
+tokenizers = { version = "0.21", default-features = false, features = ["onig"] }
+half = { version = "2.4", features = ["serde"] }
+sha2 = "0.10"
+
+[dev-dependencies]
+tempfile = { workspace = true }
+qrcode = "0.14"

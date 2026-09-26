@@ -1,0 +1,22 @@
+[package]
+name = "license-tool"
+version.workspace = true
+edition.workspace = true
+
+[[bin]]
+name = "license-tool"
+path = "src/main.rs"
+
+[dependencies]
+smc-license = { path = "../smc-license" }
+ed25519-dalek = { workspace = true, features = ["rand_core"] }
+serde = { workspace = true }
+serde_json = { workspace = true }
+chrono = { workspace = true }
+clap = { version = "4", features = ["derive"] }
+rand = "0.8"
+sha2 = "0.10"
+hex = "0.4"
+base64 = "0.22"
+csv = "1"
+uuid = { workspace = true }

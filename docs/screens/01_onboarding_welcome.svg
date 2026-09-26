@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 680" width="1000" height="680" style="background:#090a0f; font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;">
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="0%" r="70%">
+      <stop offset="0%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#090a0f" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#181a24"/>
+      <stop offset="100%" stop-color="#111219"/>
+    </linearGradient>
+    <linearGradient id="btnGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#2563eb"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background glow -->
+  <rect width="1000" height="680" fill="url(#glow)"/>
+
+  <!-- Stepper Header -->
+  <g transform="translate(300, 30)">
+    <circle cx="60" cy="20" r="14" fill="#3b82f6"/>
+    <text x="60" y="25" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">1</text>
+    <text x="60" y="48" fill="#93c5fd" font-size="11" text-anchor="middle">Welcome</text>
+
+    <line x1="85" y1="20" x2="175" y2="20" stroke="#262938" stroke-width="2"/>
+
+    <circle cx="200" cy="20" r="14" fill="#181a24" stroke="#262938" stroke-width="2"/>
+    <text x="200" y="25" fill="#64748b" font-size="12" font-weight="bold" text-anchor="middle">2</text>
+    <text x="200" y="48" fill="#64748b" font-size="11" text-anchor="middle">Folders</text>
+
+    <line x1="225" y1="20" x2="315" y2="20" stroke="#262938" stroke-width="2"/>
+
+    <circle cx="340" cy="20" r="14" fill="#181a24" stroke="#262938" stroke-width="2"/>
+    <text x="340" y="25" fill="#64748b" font-size="12" font-weight="bold" text-anchor="middle">3</text>
+    <text x="340" y="48" fill="#64748b" font-size="11" text-anchor="middle">Ready</text>
+  </g>
+
+  <!-- Container Box -->
+  <rect x="140" y="95" width="720" height="555" rx="16" fill="url(#cardGrad)" stroke="#262938" stroke-width="1"/>
+
+  <!-- Shield Badge -->
+  <g transform="translate(425, 115)">
+    <rect x="0" y="0" width="150" height="28" rx="14" fill="#1e293b" stroke="#3b82f6" stroke-opacity="0.4" stroke-width="1"/>
+    <text x="22" y="19" font-size="13">🛡️</text>
+    <text x="42" y="18" fill="#93c5fd" font-size="11" font-weight="600">100% Local &amp; Private</text>
+  </g>
+
+  <!-- Title & Subtitle -->
+  <text x="500" y="172" fill="#f8fafc" font-size="24" font-weight="700" text-anchor="middle">Welcome to SearchMyComputer</text>
+  <text x="500" y="196" fill="#94a3b8" font-size="12" text-anchor="middle">Your fast, private, intelligent desktop search launcher. Everything is indexed directly on your computer.</text>
+
+  <!-- Feature Grid (4 Cards) -->
+  <g transform="translate(180, 220)">
+    <!-- Card 1: Zero Cloud Communication -->
+    <rect x="0" y="0" width="640" height="66" rx="10" fill="#13151f" stroke="#262938" stroke-width="1"/>
+    <text x="22" y="40" font-size="20">🔒</text>
+    <text x="60" y="29" fill="#f1f5f9" font-size="13" font-weight="600">Zero Cloud Communication</text>
+    <text x="60" y="47" fill="#94a3b8" font-size="11.5">No network calls at runtime. No telemetry or usage tracking. Your files never leave your device.</text>
+
+    <!-- Card 2: Floating Status Pill (Chunk 12) -->
+    <rect x="0" y="76" width="640" height="66" rx="10" fill="#13151f" stroke="#262938" stroke-width="1"/>
+    <text x="22" y="116" font-size="20">💊</text>
+    <text x="60" y="105" fill="#f1f5f9" font-size="13" font-weight="600">Floating Status Pill</text>
+    <text x="60" y="123" fill="#94a3b8" font-size="11.5">A small, unobtrusive status pill stays docked to your screen corner so you always know when indexing is active or paused.</text>
+
+    <!-- Card 3: Smart Hybrid Search -->
+    <rect x="0" y="152" width="640" height="66" rx="10" fill="#13151f" stroke="#262938" stroke-width="1"/>
+    <text x="22" y="192" font-size="20">⚡</text>
+    <text x="60" y="181" fill="#f1f5f9" font-size="13" font-weight="600">Smart Hybrid Search</text>
+    <text x="60" y="199" fill="#94a3b8" font-size="11.5">Combines exact filenames, deep document contents, code symbols, OCR text, and semantic vectors.</text>
+
+    <!-- Card 4: Eco & Battery Aware -->
+    <rect x="0" y="228" width="640" height="66" rx="10" fill="#13151f" stroke="#262938" stroke-width="1"/>
+    <text x="22" y="268" font-size="20">🔋</text>
+    <text x="60" y="257" fill="#f1f5f9" font-size="13" font-weight="600">Eco &amp; Battery Aware</text>
+    <text x="60" y="275" fill="#94a3b8" font-size="11.5">Engineered for lightweight CPU execution with automatic background throttling on battery power.</text>
+  </g>
+
+  <!-- CTA Button -->
+  <g transform="translate(410, 580)">
+    <rect x="0" y="0" width="180" height="42" rx="8" fill="url(#btnGrad)"/>
+    <text x="90" y="26" fill="#ffffff" font-size="14" font-weight="600" text-anchor="middle">Get Started →</text>
+  </g>
+</svg>
